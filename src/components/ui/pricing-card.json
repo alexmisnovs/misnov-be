@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_ui_pricing_cards",
+  "info": {
+    "displayName": "Pricing Card",
+    "icon": "chartPie"
+  },
+  "options": {},
+  "attributes": {
+    "PlanTitle": {
+      "type": "string"
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false
+    },
+    "price": {
+      "type": "float"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.button-link"
+    }
+  }
+}

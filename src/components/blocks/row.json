@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blocks_rows",
+  "info": {
+    "displayName": "Benefits Row",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.card"
+    }
+  }
+}
