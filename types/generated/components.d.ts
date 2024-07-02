@@ -1,5 +1,17 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface BlocksCta extends Schema.Component {
+  collectionName: 'components_blocks_ctas';
+  info: {
+    displayName: 'CTA';
+  };
+  attributes: {
+    Heading: Attribute.String;
+    Description: Attribute.Text;
+    Form: Attribute.Component<'ui.form'>;
+  };
+}
+
 export interface BlocksHeroSection extends Schema.Component {
   collectionName: 'components_blocks_hero_sections';
   info: {
@@ -74,6 +86,31 @@ export interface UiCard extends Schema.Component {
   };
 }
 
+export interface UiForm extends Schema.Component {
+  collectionName: 'components_ui_forms';
+  info: {
+    displayName: 'Form';
+  };
+  attributes: {
+    Header: Attribute.String;
+    Description: Attribute.Text;
+    Input: Attribute.Component<'ui.input', true>;
+    Button: Attribute.Component<'ui.button-link'>;
+  };
+}
+
+export interface UiInput extends Schema.Component {
+  collectionName: 'components_ui_inputs';
+  info: {
+    displayName: 'Input';
+  };
+  attributes: {
+    Placeholder: Attribute.String;
+    Label: Attribute.String;
+    inputType: Attribute.String;
+  };
+}
+
 export interface UiPricingCard extends Schema.Component {
   collectionName: 'components_ui_pricing_cards';
   info: {
@@ -96,12 +133,15 @@ export interface UiPricingCard extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'blocks.cta': BlocksCta;
       'blocks.hero-section': BlocksHeroSection;
       'blocks.pricing': BlocksPricing;
       'blocks.row': BlocksRow;
       'seo.meta-data': SeoMetaData;
       'ui.button-link': UiButtonLink;
       'ui.card': UiCard;
+      'ui.form': UiForm;
+      'ui.input': UiInput;
       'ui.pricing-card': UiPricingCard;
     }
   }
