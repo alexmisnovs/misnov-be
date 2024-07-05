@@ -1,14 +1,15 @@
 {
   "collectionName": "components_ui_button_links",
   "info": {
-    "displayName": "Button link"
+    "displayName": "Button link",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Title": {
       "type": "string"
     },
-    "link": {
+    "Link": {
       "type": "string"
     },
     "isExternal": {

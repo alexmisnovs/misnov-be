@@ -2,6 +2,8 @@
  * `pagesMiddleware` middleware
  */
 
+import { Strapi } from "@strapi/strapi";
+
 // generate populate object based on the schema of the app:
 const populate = {
   populate: {
@@ -37,8 +39,6 @@ const populate = {
     },
   },
 };
-
-import { Strapi } from "@strapi/strapi";
 
 export default (config, { strapi }: { strapi: Strapi }) => {
   // Add your own logic here.

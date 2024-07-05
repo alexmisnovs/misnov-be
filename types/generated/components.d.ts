@@ -49,6 +49,29 @@ export interface BlocksRow extends Schema.Component {
   };
 }
 
+export interface LayoutFooter extends Schema.Component {
+  collectionName: 'components_layout_footers';
+  info: {
+    displayName: 'Footer';
+  };
+  attributes: {
+    logoText: Attribute.Component<'ui.button-link'>;
+    middleText: Attribute.Text;
+    socialLink: Attribute.Component<'ui.button-link', true>;
+  };
+}
+
+export interface LayoutHeader extends Schema.Component {
+  collectionName: 'components_layout_headers';
+  info: {
+    displayName: 'Header';
+  };
+  attributes: {
+    logoText: Attribute.Component<'ui.button-link'>;
+    ctaButton: Attribute.Component<'ui.button-link'>;
+  };
+}
+
 export interface SeoMetaData extends Schema.Component {
   collectionName: 'components_seo_meta_data';
   info: {
@@ -65,10 +88,11 @@ export interface UiButtonLink extends Schema.Component {
   collectionName: 'components_ui_button_links';
   info: {
     displayName: 'Button link';
+    description: '';
   };
   attributes: {
     Title: Attribute.String;
-    link: Attribute.String;
+    Link: Attribute.String;
     isExternal: Attribute.Boolean & Attribute.DefaultTo<false>;
     Type: Attribute.Enumeration<['PRIMARY', 'SECONDARY', 'LINK']>;
   };
@@ -78,11 +102,12 @@ export interface UiCard extends Schema.Component {
   collectionName: 'components_ui_cards';
   info: {
     displayName: 'Card';
+    description: '';
   };
   attributes: {
     image: Attribute.Media<'images'>;
-    Heading: Attribute.String;
-    Description: Attribute.Text;
+    heading: Attribute.String;
+    description: Attribute.Text;
   };
 }
 
@@ -137,6 +162,8 @@ declare module '@strapi/types' {
       'blocks.hero-section': BlocksHeroSection;
       'blocks.pricing': BlocksPricing;
       'blocks.row': BlocksRow;
+      'layout.footer': LayoutFooter;
+      'layout.header': LayoutHeader;
       'seo.meta-data': SeoMetaData;
       'ui.button-link': UiButtonLink;
       'ui.card': UiCard;

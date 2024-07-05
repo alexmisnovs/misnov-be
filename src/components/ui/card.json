@@ -1,21 +1,23 @@
 {
   "collectionName": "components_ui_cards",
   "info": {
-    "displayName": "Card"
+    "displayName": "Card",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
-    "Heading": {
+    "heading": {
       "type": "string"
     },
-    "Description": {
+    "description": {
       "type": "text"
     }
   }
