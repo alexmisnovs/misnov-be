@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "daily_slots",
+  "info": {
+    "singularName": "daily-slot",
+    "pluralName": "daily-slots",
+    "displayName": "Daily Available Appointments",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Employee": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee"
+    },
+    "numberOfAppointmets": {
+      "type": "integer"
+    }
+  }
+}
