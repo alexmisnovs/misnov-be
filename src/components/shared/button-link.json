@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_button_links",
+  "info": {
+    "displayName": "Button Link",
+    "icon": "code",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "buttonText": {
+      "type": "string"
+    },
+    "link": {
+      "type": "text"
+    }
+  }
+}

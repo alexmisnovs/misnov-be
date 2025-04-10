@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "volunteer_jobs",
+  "info": {
+    "singularName": "volunteer-job",
+    "pluralName": "volunteer-jobs",
+    "displayName": "Volunteer Job",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event.event",
+      "inversedBy": "volunteer_jobs"
+    },
+    "volunteer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::volunteer.volunteer",
+      "inversedBy": "volunteer_jobs"
+    }
+  }
+}

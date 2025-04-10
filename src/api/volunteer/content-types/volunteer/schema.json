@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "volunteers",
+  "info": {
+    "singularName": "volunteer",
+    "pluralName": "volunteers",
+    "displayName": "Volunteer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "unique": true
+    },
+    "yearGroup": {
+      "type": "string"
+    },
+    "events_interested": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event.event"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "volunteer_jobs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::volunteer-job.volunteer-job",
+      "mappedBy": "volunteer"
+    },
+    "mailchimpId": {
+      "type": "text"
+    },
+    "mailchimpStatus": {
+      "type": "text"
+    }
+  }
+}
